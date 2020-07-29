@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Pokemoves::Cli
 
 Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/pokemoves/cli`. To experiment with that code, run `bin/console` for an interactive prompt.
@@ -41,3 +42,6 @@ The gem is available as open source under the terms of the [MIT License](https:/
 ## Code of Conduct
 
 Everyone interacting in the Pokemoves::Cli project’s codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/'mystical-process-8698'/pokemoves-cli/blob/master/CODE_OF_CONDUCT.md).
+=======
+# pokemoves-cli
+>>>>>>> 499eea398db4987c8fc9f5e83ba535772ecfa094
