@@ -1,9 +1,7 @@
 <<<<<<< HEAD
 # Pokemoves::Cli
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/pokemoves/cli`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+Pokemoves allows you to easily check which moves pokemon can learn, as well as which pokemon can learn a specific move. You can also check a pokemon's/move's given type.
 
 ## Installation
 
