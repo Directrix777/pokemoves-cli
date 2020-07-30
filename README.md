@@ -1,5 +1,5 @@
 <<<<<<< HEAD
-# Pokemoves::Cli
+# Pokemoves-cli
 
 Pokemoves allows you to easily check which moves pokemon can learn, as well as which pokemon can learn a specific move. You can also check a pokemon's/move's given type.
 
