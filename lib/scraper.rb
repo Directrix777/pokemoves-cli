@@ -17,7 +17,7 @@ class Scraper
   end
   
   def self.pokemons
-    @@pokemons
+    @@pokemons.collect{|pokemon| pokemon["name"]
   end
   
   def self.get_move_by_name(name)
@@ -29,7 +29,7 @@ class Scraper
   end
   
   def self.moves
-    @@moves
+    @@moves.collect{|pokemon| pokemon["name"]
   end
   
 end
