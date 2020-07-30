@@ -16,6 +16,10 @@ class Scraper
     }
   end
   
+  def self.pokemons
+    @@pokemons
+  end
+  
   def self.get_move_by_name(name)
     @@moves.each{|move|
       if move["name"] == name
@@ -24,8 +28,8 @@ class Scraper
     }
   end
   
-  
+  def self.moves
+    @@moves
+  end
   
 end
-
-puts Scraper.get_move_by_name("cut")["name"]
