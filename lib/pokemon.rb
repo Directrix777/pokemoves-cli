@@ -1,4 +1,4 @@
-require_relative "./scraper.rb"
+require_relative "scraper.rb"
 
 class Pokemon
   attr_reader :name, :type
@@ -6,9 +6,10 @@ class Pokemon
   
   def initialize(name)
     @name = name
-    @type = Scraper.get_pokemon_by_name(name)["types"][0]["name"]
-    binding pry
+    @type = Scraper.get_pokemon_by_name(name)["types"][0]["type"]["name"]
   end
+  
+  
 end
 
-Pokemon.new("sylveon")
+puts Pokemon.new("sylveon").type
