@@ -11,7 +11,7 @@ class Scraper
     binding.pry
     @@pokemons.each{|pokemon|
       if pokemon["name"] == name
-        return HTTParty.get(pokemon["url"])
+        return HTTParty.get(pokemon["url"])}
       end
     }
   end
@@ -29,7 +29,7 @@ class Scraper
   end
   
   def self.moves
-    @@moves.collect{|pokemon| pokemon["name"]
+    @@moves.collect{|pokemon| pokemon["name"]}
   end
   
 end
