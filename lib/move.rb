@@ -1,14 +1,13 @@
 require_relative "scraper.rb"
 
-class Pokemon
+class Move
   attr_reader :name, :type
   @@all = []
   
   def initialize(name)
     @name = name
-    @type = Scraper.get_pokemon_by_name(name)["types"][0]["type"]["name"]
+    @type = Scraper.get_move_by_name(name)["type"]["name"]
     @@all << self
-    binding.pry
   end
   
   def self.all
@@ -16,9 +15,9 @@ class Pokemon
   end
   
   def self.find_or_create_by_name(name)
-    if Scraper.pokemons.include?(name)
+    if Scraper.moves.include?(name)
       return self.all.detect{|a| a.name == name} if self.all.collect{|a| a.name}.include?(name)
-      return Pokemon.new(name)
+      return Move.new(name)
     end
     return nil
   end

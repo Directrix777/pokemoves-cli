@@ -8,7 +8,6 @@ class Pokemon
     @name = name
     @type = Scraper.get_pokemon_by_name(name)["types"][0]["type"]["name"]
     @@all << self
-    binding.pry
   end
   
   def self.all
