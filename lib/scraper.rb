@@ -3,7 +3,7 @@ require "pry"
 
 class Scraper
   
-  attr_reader :url
+  attr_reader :url :pokemon :moves
   
   def initialize
     @url = "https://pokeapi.co/api/v2/"
@@ -12,11 +12,7 @@ class Scraper
   def scrape_pokemon()
     pokemon_url_list = HTTParty.get(url + "/pokemon?offset=0&limit=964")
     pokemon_url_list.parsed_response
-    pokemon_list = []
-    pokemon_url_list["results"].each{|pokemon_url|
-      pokemon_list << HTTParty.get(pokemon_url[url]).parsed_response
-    }
-    binding.pry
+    @pokemon = pokemon_url_list
   end
   
 end
