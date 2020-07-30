@@ -1,4 +1,5 @@
 require_relative "scraper.rb"
+require_relative "pokemon.rb"
 
 class Move
   attr_reader :name, :type
@@ -8,6 +9,10 @@ class Move
     @name = name
     @type = Scraper.get_move_by_name(name)["type"]["name"]
     @@all << self
+  end
+  
+  def learnable_by?(pokemon_name)
+    Pokemon.find_or_create_by_name(pokemon_name).can_learn_move?(self.name)
   end
   
   def self.all

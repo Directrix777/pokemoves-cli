@@ -10,6 +10,14 @@ class Pokemon
     @@all << self
   end
   
+  def get_moves
+    moves = Scraper.get_pokemon_by_name(@name)["moves"].collect{|move_hash| move_hash["move"]["name"]}
+  end
+  
+  def can_learn_move?(move_name)
+    self.get_moves.include?(move_name)
+  end
+  
   def self.all
     @@all
   end
@@ -21,4 +29,5 @@ class Pokemon
     end
     return nil
   end
+  
 end
