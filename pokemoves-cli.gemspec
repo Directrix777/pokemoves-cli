@@ -5,7 +5,7 @@ require "pokemoves/cli/version"
 
 Gem::Specification.new do |spec|
   spec.name          = "pokemoves-cli"
-  spec.version       = Pokemoves::CLI::VERSION
+  spec.version       = Pokemoves::Cli::VERSION
   spec.authors       = ["'Andrew Ribas'"]
   spec.email         = ["'andrew.j.ribas@gmail.com'"]
 
