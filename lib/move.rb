@@ -11,10 +11,6 @@ class Move
     @@all << self
   end
   
-  def learnable_by?(pokemon_name)
-    Pokemon.find_or_create_by_name(pokemon_name).can_learn_move?(self.name)
-  end
-  
   def self.all
     @@all
   end
