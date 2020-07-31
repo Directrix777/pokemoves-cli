@@ -5,12 +5,12 @@ require "pokemoves/cli/version"
 
 Gem::Specification.new do |spec|
   spec.name          = "pokemoves-cli"
-  spec.version       = Pokemoves::Cli::VERSION
+  spec.version       = Pokemoves::CLI::VERSION
   spec.authors       = ["'Andrew Ribas'"]
   spec.email         = ["'andrew.j.ribas@gmail.com'"]
 
   spec.summary       = %q{"Accesses pokemon moves"}
-  spec.description   = %q{"Pokemoves allows you to easily check which moves pokemon can learn, as well as which pokemon can learn a specific move. You can also check a pokemon's/move's given type."}
+  spec.description   = %q{"Pokemoves allows you to easily check which moves pokemon can learn, as well as which pokemon can learn a specific move. You can also check a move's given type."}
   spec.homepage      = "https://github.com/Directrix777/pokemoves-cli"
   spec.license       = "MIT"
 
