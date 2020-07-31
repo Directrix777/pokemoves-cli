@@ -1,6 +1,6 @@
 #!/usr/bin/env ruby
 
-require "./lib/pokemoves.rb"
+require "pokemoves"
 
 cli = Pokemoves::CLI.new
 

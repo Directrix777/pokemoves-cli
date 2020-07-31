@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    pokemoves-cli (1.0.1)
+    pokemoves-cli (1.0.3)
 
 GEM
   remote: https://rubygems.org/
