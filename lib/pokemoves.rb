@@ -24,7 +24,7 @@ require "pokemoves/cli/version"
           gets
           counter = 1
           current_pokemon.get_moves.each{|move|
-            puts "#{counter}. #{move.split("-").collect{|word| word.capitalize}.join(" ")}"
+            puts "#{counter}. #{move.pretty_name}"
           counter += 1
           }
           puts "Enter the number of the move you'd like to know the type of."
@@ -32,8 +32,8 @@ require "pokemoves/cli/version"
           num = gets.to_i
           until num <= 0
             if(num <= current_pokemon.get_moves.size)
-              current_move = Move.find_or_create_by_name(current_pokemon.get_moves[num - 1])
-              puts "The move #{current_move.name.capitalize} is a #{current_move.type} type move."
+              current_move = Move.find_or_create_by_name(current_pokemon.get_moves[num - 1].name)
+              puts "The move #{current_move.pretty_name} is a #{current_move.type} type move."
             else
               puts "That number is not in the list of moves."
             end
@@ -45,13 +45,13 @@ require "pokemoves/cli/version"
         elsif input == 2
           puts "Enter the name of a move!"
           move_name = gets.chomp
-          until Move.find_or_create_by_name(move_name.split(" ").collect{|word| word.downcase}.join("-")) != nil
+          until Move.find_or_create_by_pretty_name(move_name) != nil
             puts "It doesn't look like we have that move stored."
             puts "Try a different one."
             move_name = gets.chomp
           end
-          current_move = Move.find_or_create_by_name(move_name.split(" ").collect{|word| word.downcase}.join("-"))
-          puts "Enter the name of a pokemon to see if they can learn #{current_move.name.split("-").collect{|word|  word.capitalize}.join(" ")}"
+          current_move = Move.find_or_create_by_pretty_name(move_name)
+          puts "Enter the name of a pokemon to see if they can learn #{current_move.pretty_name}"
           pokemon_name = gets.chomp
           until Pokemon.find_or_create_by_name(pokemon_name.downcase) != nil
             puts "It doesn't look like we have that pokemon stored."
@@ -60,12 +60,12 @@ require "pokemoves/cli/version"
           end
           until pokemon_name == "exit"
             current_pokemon = Pokemon.find_or_create_by_name(pokemon_name.downcase)
-            if current_pokemon.can_learn_move?(current_move.name)
-              puts "It looks like #{current_pokemon.name.capitalize} can learn #{current_move.name.split("-").collect{|word| word.capitalize}.join(" ")}."
+            if current_pokemon.can_learn_move?(current_move)
+              puts "It looks like #{current_pokemon.name.capitalize} can learn #{current_move.pretty_name}."
             else
-              puts "It looks like #{current_pokemon.name.capitalize} can't learn #{current_move.name.split("-").collect{|word| word.capitalize}.join(" ")}."
+              puts "It looks like #{current_pokemon.name.capitalize} can't learn #{current_move.pretty_name}."
             end
-            puts "Enter the name of another pokemon to see if they can learn #{current_move.name.split("-").collect{|word| word.capitalize}.join(" ")}."
+            puts "Enter the name of another pokemon to see if they can learn #{current_move.pretty_name}."
             puts "Enter \"exit\" to continue to the main menu."
             pokemon_name = gets.chomp
             until Pokemon.find_or_create_by_name(pokemon_name.downcase) != nil || pokemon_name == "exit"
