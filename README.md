@@ -20,7 +20,7 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+Simply enter the command "pokemoves" into the terminal to start up the CLI. From there, instructions are provided by the cli itself. 
 
 ## Development
 
