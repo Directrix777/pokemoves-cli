@@ -2,5 +2,5 @@
 
 require "pokemoves"
 
-cli = Pokemoves::CLI.new
+cli = Pokemoves::CLI.new.run
 
