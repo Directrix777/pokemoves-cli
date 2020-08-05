@@ -87,5 +87,3 @@ require "pokemoves/cli/version"
     end
   
   end
-
-end
