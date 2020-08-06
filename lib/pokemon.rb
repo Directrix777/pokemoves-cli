@@ -11,7 +11,7 @@ class Pokemon
   end
   
   def get_moves
-    moves = Scraper.get_pokemon_by_name(@name)["moves"].collect{|move_hash| Move.new(move_hash["move"]["name"])}
+    Scraper.get_pokemon_by_name(@name)["moves"].collect{|move_hash| Move.new(move_hash["move"]["name"])}
   end
   
   def can_learn_move?(move)
