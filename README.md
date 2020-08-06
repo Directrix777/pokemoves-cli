@@ -20,7 +20,11 @@ Or install it yourself as:
 
 ## Usage
 
-Simply enter the command "pokemoves" into the terminal to start up the CLI. From there, instructions are provided by the cli itself. 
+Simply enter the command: 
+
+    $ pokemoves 
+
+Into the terminal to start up the CLI. From there, instructions are provided by the CLI itself. 
 
 ## Development
 
