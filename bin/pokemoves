@@ -1,6 +1,6 @@
 #!/usr/bin/env ruby
 
-require "pokemoves"
+require_relative "../lib/pokemoves.rb"
 
 Pokemoves::CLI.new.run
 
